@@ -1,0 +1,83 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<style>
+    /*html {*/
+    /*    font-size: 62.5%;*/
+    /*}*/
+    /* CSS for body of login Page*/
+    body {
+        background-image: url("https://images.unsplash.com/photo-1551434678-e076c223a692?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    /* CSS for form Page */
+    #form {
+        background-color: #17183bd2;
+        background-size: cover;
+        background-repeat: no-repeat;
+        /*max-width: 50.0rem;*/
+        /* background-attachment: fixed; */
+        margin-left: 6.0rem;
+        margin-top: 8.0rem;
+        padding-top: 10px;
+        padding-left: 10px;
+        /*margin-right: 6.0rem;*/
+        border-radius: .4rem;
+        height: 485px;
+        width: 500px;
+    }
+
+    /* CSS for Text Field */
+    input[type=text],
+    input[type=password] {
+        width: 450px;
+    }
+</style>
+<title>Sign Up</title>
+{% endblock %}
+
+{% block body %}
+<!--Login Form-->
+<div class="container mt-4" id="form">
+    <h2 style="color:white">Please Login Here:</h2>
+    <hr>
+
+    <form action="/login" method="post">
+        <div class="form-group">
+            <label style="color:white" for="username">Username</label>
+            <input type="text" name="username" class="form-control" id="username" aria-describedby="emailHelp"
+                   placeholder="Enter Username">
+        </div>
+        <div class="form-group">
+            <label style="color:white" for="password1">Password</label>
+            <input type="password" name="password1" class="form-control" id="password1" placeholder="Enter Password">
+        </div>
+        <div class="form-group form-check">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            <label style="color:white" class="form-check-label" for="exampleCheck1">Remember me</label>
+        </div>
+        <button type="submit" class="btn btn-primary">Log In</button>
+    </form>
+    {% if errors %}
+    <h3>{{errors}}</h3>
+    {% endif %}
+</div>
+
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
+{% endblock %}

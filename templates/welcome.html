@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        /*The CSS of Our Services Section*/
+        .cont {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+            url(https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80);
+            background-size: cover;
+            background-position: center;
+            color: #fff !important;
+            display: block;
+            padding-top: 0px;
+        }
+
+        /* CSS of Carousel*/
+        #carouselExampleCaptions {
+            display: block;
+        }
+
+        /* CSS of Navbar */
+        #nav {
+            color: black;
+        }
+
+        /* CSS of Our Services Text*/
+        .services {
+            /*margin: 90px auto;*/
+            text-align: center;
+        }
+
+        /* CSS of different Fields of Services*/
+        h3 a {
+            color: white
+        }
+
+
+        h1 {
+            font-family: sans-serif;
+            letter-spacing: 1px;
+        }
+
+        h1:after {
+            content: '';
+            background: white;
+            display: block;
+            width: 150px;
+            height: 3px;
+            margin: 10px auto;
+        }
+
+        /*CSS of different icons*/
+        .icon {
+            font-size: 40px;
+            margin: 20px auto;
+            padding: 20px;
+            height: 80px;
+            width: 80px;
+            border: 1px solid white;
+            border-radius: 50%
+        }
+
+
+        #ser {
+            text-align: center;
+            width: 500px;
+            padding-top: 15rem;
+            padding-right: 0.75rem;
+            padding-left: 0.75rem;
+            /*margin-top: auto;*/
+            margin-right: auto;
+            margin-left: auto;
+            font-size: 50px;
+        }
+
+        #ser1 {
+            text-align: center;
+            width: 700px;
+            /*padding-top: 4rem;*/
+            /*padding-right: 0.10rem;*/
+            /*padding-left: 0.10rem;*/
+            /*margin-top: auto;*/
+            margin-right: auto;
+            margin-left: auto;
+            font-size: 60px;
+            font-weight: bolder;
+        }
+
+        /* CSS for Carousel Images*/
+        #user {
+
+            width: 100%;
+            height: 600px;
+            color: #fff !important;
+        }
+
+        /* CSS for Our Services Cards */
+        .col-md-3:hover {
+            box-shadow: 5px 7px 9px -3px rgba(255, 255, 255, 0.5);
+            cursor: pointer
+        }
+
+        .contain {
+            background-image: linear-gradient(rgba(5, 5, 5, 0.596),
+            rgba(23, 24, 59, 0.596)),
+            url("https://images.unsplash.com/photo-1526738549149-8e07eca6c147?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=625&q=80");
+            width: 100%;
+            height: 600px;
+            color: #fff !important;
+            background-size: cover;
+            background-position: center;
+            display: block;
+        }
+    </style>
+    <title>welcome</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/51f7ea6787.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <link href="{{url_for('static', filename='/css/style1.css')}}" rel="stylesheet">
+    {% block head %} {% endblock %}
+</head>
+
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid" id="nav">
+        <a class="navbar-brand" href="/base">Service Provider</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="" id="navbarNavAltMarkup">
+            <div class="navbar-nav" style="float: right;">
+                <a class="nav-link active" href="#serv">Services</a>
+                <a class="nav-link active" aria-current="page" href="/payment">Payment History</a>
+                <a class="nav-link active" href="#">Calender</a>
+                <a class="nav-link active" href="/edit">
+                    <div class="pro">
+                        <i class="fas fa-user-circle" style='font-size:36px;'></i>
+
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</nav>
+{% block body %}
+<header class="masthead">
+    <div class="contain">
+        <div class="masthead-subheading" id="ser">Welcome {{user}}</div>
+        <div class="masthead-heading text-uppercase" id="ser1">It's Nice To Meet You</div>
+        <!--        <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#services">Tell Me More</a>-->
+    </div>
+</header>
+<div class="cont" id="serv">
+    <div class="services">
+        <h1>Our Services</a></h1>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 text-center">
+                <div class="icon">
+                    <i class="fab fa-facebook"></i>
+
+                </div>
+                <h3><a href="/webdev">Web Developer</a></h3>
+                <p>Lorem Ipsum is simply dummy text of the printing and
+                    typesetting industry. Lorem Ipsum has been the industry
+                    's standard dummy text ever since the 1500s, when an
+                </p>
+            </div>
+
+            <div class="col-md-3 text-center">
+                <div class="icon">
+                    <i class="fab fa-pinterest"></i>
+
+                </div>
+                <h3><a href="/webdev">App Developer</a></h3>
+                <p>Lorem Ipsum is simply dummy text of the printing and
+                    typesetting industry. Lorem Ipsum has been the industry
+                    's standard dummy text ever since the 1500s, when an
+                </p>
+            </div>
+
+            <div class="col-md-3 text-center">
+                <div class="icon">
+                    <i class="fab fa-twitter"></i>
+
+                </div>
+                <h3><a href="/webdev">Digital Marketing</a></h3>
+                <p>Lorem Ipsum is simply dummy text of the printing and
+                    typesetting industry. Lorem Ipsum has been the industry
+                    's standard dummy text ever since the 1500s, when an
+                </p>
+            </div>
+
+            <div class="col-md-3 text-center">
+                <div class="icon">
+                    <i class="fab fa-snapchat"></i>
+
+                </div>
+                <h3><a href="/webdev">Graphics Designing</a></h3>
+                <p>Lorem Ipsum is simply dummy text of the printing and
+                    typesetting industry. Lorem Ipsum has been the industry
+                    's standard dummy text ever since the 1500s, when an
+                </p>
+            </div>
+            <div class="col-md-3 text-center">
+                <div class="icon">
+                    <i class="fab fa-snapchat"></i>
+
+                </div>
+                <h3><a href="/webdev">Graphics Designing</a></h3>
+                <p>Lorem Ipsum is simply dummy text of the printing and
+                    typesetting industry. Lorem Ipsum has been the industry
+                    's standard dummy text ever since the 1500s, when an
+                </p>
+            </div>
+            <div class="col-md-3 text-center">
+                <div class="icon">
+                    <i class="fab fa-snapchat"></i>
+
+                </div>
+                <h3><a href="/webdev">Graphics Designing</a></h3>
+                <p>Lorem Ipsum is simply dummy text of the printing and
+                    typesetting industry. Lorem Ipsum has been the industry
+                    's standard dummy text ever since the 1500s, when an
+                </p>
+            </div>
+            <div class="col-md-3 text-center">
+                <div class="icon">
+                    <i class="fab fa-snapchat"></i>
+
+                </div>
+                <h3><a href="/webdev">Graphics Designing</a></h3>
+                <p>Lorem Ipsum is simply dummy text of the printing and
+                    typesetting industry. Lorem Ipsum has been the industry
+                    's standard dummy text ever since the 1500s, when an
+                </p>
+            </div>
+            <div class="col-md-3 text-center">
+                <div class="icon">
+                    <i class="fab fa-snapchat"></i>
+
+                </div>
+                <h3><a href="/webdev">Graphics Designing</a></h3>
+                <p>Lorem Ipsum is simply dummy text of the printing and
+                    typesetting industry. Lorem Ipsum has been the industry
+                    's standard dummy text ever since the 1500s, when an
+                </p>
+            </div>
+        </div>
+
+    </div>
+    <br>
+    <br>
+
+</div>
+<footer class="footer">
+
+    <!-- Copyright -->
+    <div id="copy" class="text-center p-3" style="background-color: black; color: white;">
+        © 2020 Copyright
+    </div>
+    <!-- Copyright -->
+</footer>
+
+</body>
+{% endblock %}
